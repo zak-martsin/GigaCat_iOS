@@ -44,5 +44,6 @@ extension WorkoutProgram {
         beginner.days = [day1, day2, day3]
 
         return [beginner]
+
     }
 }
