@@ -31,17 +31,6 @@ struct WorkoutView: View {
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        // Header greeting
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text("Привет 💪")
-                                .font(.largeTitle.bold())
-                            Text("Выбери программу тренировки")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
-                        .padding(.horizontal)
-                        .padding(.top, 8)
-
                         LazyVGrid(
                             columns: [GridItem(.flexible()), GridItem(.flexible())],
                             spacing: 16
@@ -55,17 +44,13 @@ struct WorkoutView: View {
                     .padding(.bottom, 32)
                 }
             }
-            .navigationTitle("GigaCat")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Workout")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showingAddProgram = true
                     } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title2)
-                            .symbolRenderingMode(.hierarchical)
-                            .foregroundStyle(.orange)
+                        Image(systemName: "plus")
                     }
                 }
             }
