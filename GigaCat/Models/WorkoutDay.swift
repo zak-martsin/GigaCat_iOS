@@ -1,3 +1,11 @@
+//
+//  WorkoutDay.swift
+//  GigaCat
+//
+//  Created by Захар Марцинкевич on 10/04/2026.
+//
+
+
 import Foundation
 import SwiftData
 
@@ -5,7 +13,7 @@ import SwiftData
 final class WorkoutDay {
     var id: UUID
     var title: String
-    var order: Int
+
     var program: WorkoutProgram?
 
     @Relationship(deleteRule: .cascade, inverse: \Exercise.day)
@@ -20,7 +28,6 @@ final class WorkoutDay {
     ) {
         self.id = id
         self.title = title
-        self.order = order
         self.program = program
         self.exercises = exercises
     }
